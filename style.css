@@ -1,0 +1,252 @@
+/* Base resets */
+@import url('https://static.jocarsa.com/fuentes/ubuntu-font-family-0.83/ubuntu.css');
+
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Ubuntu, sans-serif;
+    background: #f2f2f2;
+}
+
+/* Header / top nav */
+header {
+    background: #0D47A1;
+    color: #fff;
+    padding: 1em;
+}
+header h1 {
+    margin: 0;
+    display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	align-content: stretch;
+}
+header h1 img{
+	width:60px;
+	margin-right:20px;
+}
+header h2{
+	text-align:center;
+}
+nav{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	align-content: stretch;
+}
+/* Top menu as a UL */
+.top-menu,
+.top-menu li,
+.top-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.top-menu {
+    display: flex;
+    align-items: center;
+    background: #0D47A1;
+}
+.top-menu > li {
+    position: relative;
+    margin-right: 1em;
+}
+.top-menu > li > a {
+    display: block;
+    padding: 0.8em 1.2em;
+    color: #BBDEFB;
+    text-decoration: none;
+    font-weight: bold;
+}
+.top-menu > li > a:hover {
+    background: #1565C0;
+    text-decoration: underline;
+}
+
+/* Submenu styling */
+.cat-submenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #fefefe;
+    border: 1px solid #ddd;
+    min-width: 160px;
+    display: none;
+    z-index: 999;
+}
+.cat-submenu li {
+    position: relative;
+}
+.cat-submenu li a {
+    color: #333;
+    padding: 0.5em 1em;
+    display: block;
+    border-bottom: 1px solid #eee;
+    text-decoration: none;
+}
+.cat-submenu li a:hover {
+    background: #f2f2f2;
+}
+.cat-submenu li:last-child a {
+    border-bottom: none;
+}
+/* Show submenu on hover */
+.top-menu > li:hover > .cat-submenu {
+    display: block;
+}
+.cat-submenu li:hover > .cat-submenu {
+    display: block;
+    left: 100%;
+    top: 0;
+}
+
+/* Main container */
+main {
+    max-width: 1000px;
+    margin: 1em auto;
+    padding: 1em;
+    background: #fff;
+    border-radius: 4px;
+}
+
+/* Alerts */
+.alert {
+    padding: 10px;
+    margin-bottom: 1em;
+    border-radius: 4px;
+}
+.alert-error {
+    background: #ffd6d6;
+    color: #a00;
+}
+.alert-success {
+    background: #d6ffd6;
+    color: #0a0;
+}
+
+/* Forms */
+form {
+    background: #fafafa;
+    padding: 1em;
+    margin: 1em 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+form div {
+    margin-bottom: 0.5em;
+}
+label {
+    display: inline-block;
+    width: 100px;
+}
+input[type="text"],
+input[type="password"],
+input[type="email"],
+select,
+textarea {
+    width: 300px;
+    padding: 5px;
+    margin-top: 5px;
+}
+button {
+    padding: 8px 16px;
+    cursor: pointer;
+    background: #0D47A1;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+}
+button:hover {
+    background: #1565C0;
+}
+
+/* Multi-row / multi-column layout for news */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+.news-item {
+    box-sizing: border-box;
+    padding: 1em;
+    border: 1px solid #ddd;
+    background: #fdfdfd;
+    margin: 0 5px;
+    border-radius: 4px;
+    flex: 0 0 auto;
+}
+.news-item h3 {
+    margin-top: 0;
+    margin-bottom: 0.5em;
+    font-size: 1.2em;
+}
+.news-item .date {
+    display: block;
+    margin-bottom: 0.5em;
+    color: #666;
+    font-size: 0.9em;
+}
+.news-item img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 0.5em;
+    border-radius: 4px;
+}
+
+/* Column classes */
+.columns-1 .news-item {
+    flex: 0 0 100%;
+}
+.columns-2 .news-item {
+    flex: 0 0 calc(50% - 10px);
+}
+.columns-3 .news-item {
+    flex: 0 0 calc(33.333% - 10px);
+}
+.columns-4 .news-item {
+    flex: 0 0 calc(25% - 10px);
+}
+
+/* Single news page */
+.single-news {
+    margin-top: 2em;
+}
+.single-news img {
+    max-width: 100%;
+    margin-bottom: 1em;
+    border-radius: 4px;
+}
+.single-news .meta {
+    color: #666;
+    font-size: 0.9em;
+    margin-bottom: 1em;
+}
+
+/* Comments styling */
+.comment {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+    background: #f9f9f9;
+    border-radius: 4px;
+}
+.comment strong {
+    color: #333;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1em;
+    background: #0D47A1;
+    color: #fff;
+    margin-top: 1em;
+}
+
